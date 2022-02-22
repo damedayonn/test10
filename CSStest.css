@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    transition: all 0.5s;
+    color: hsl(0, 0%, 80%);
+}
+a:hover {
+    transition: all 0.5s;
+    color: hsl(0, 0%, 100%);
+}
+body {
+    margin: 0;
+    background-color: hsl(0, 0%, 5%);
+    background-image: url('/imgs/imgs01.png');
+}
+
+.mainView{
+    position: relative;
+    background-color: hsl(0, 0%, 10%);
+    border: 1px solid hsl(0, 0%, 20%);
+    border-radius: 19px;
+    box-shadow: 7px 7px 5px rgba(0,0,0,0.7);
+    width: 1400px;
+    height: 800px;
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+}
+.topNav,.content,.btmNav {
+    
+    width: 100%;
+}
+.topNav {
+    display: flex;
+    flex-direction: row;
+}
+.topNav {
+    height: 50px;
+    border-bottom: 1px solid #121212;
+    box-shadow: 0 3px 5px #121212;
+}
+.btmNav {
+    height: 150px;
+}
+.topItem {
+    width: 200px; height: 100%;
+    color:hsl(0, 0%, 80%);
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s;
+}
+.topItem:nth-child(1) {
+    border-top-left-radius: 19px;
+}
+.topItem:nth-child(8) {
+    border-top-right-radius: 19px;
+}
+.topItem:hover {
+    background-color: #BB86FC;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.itemClicked {
+    background-color: #BB86FC;
+}
+.content {
+    width: 100%;
+    border-bottom: 1px solid #121212;
+    box-shadow: 0 3px 5px hsl(0, 0%, 8%);
+}
+.contentWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 30px;
+    width: 1200px; height: 600px;
+    margin: auto
+}
+.contentWrap::-webkit-scrollbar{width: 6px;}
+    
+    ::-webkit-scrollbar-thumb {background-color:hsl(0, 0%, 40%);;border-radius: 10px;}
+    ::-webkit-scrollbar-thumb:hover {background: #555;}
+    
+.contentInfo {
+    width: 200px; height: 200px;
+    padding-top: 15px;
+    margin: 10px;
+    background-color: hsl(0, 0%, 12%);
+    box-shadow: 2px 2px 5px hsl(0, 0%, 8%);
+    border-radius: 15%;
+    border: 1px solid hsl(0, 0%, 20%);
+    /* filter: grayscale(100%); */
+    transition: all 0.5s;
+}
+.loading {
+    width: 200px; height: 200px;
+    padding-top: 15px;
+    margin: 10px;
+    box-shadow: 0px 0px 0px;
+    color: hsl(0, 0%, 80%);
+}
+.contentInfo:hover {
+    /* filter:grayscale(0%); */
+    transform: scale(1.1);
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 50;
+}
+.itemImg {
+    width: 150px; height: 150px;
+    border-radius: 15%;
+    overflow: hidden;
+    margin: auto;
+}
+img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.itemText {
+    margin-top: 5px;
+    padding-bottom: 10px;
+    float: left;
+    width:100%; height: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 80%);
+}
+.modals {
+    width: 100%; height: 100%;
+    top: 0; left: 0; bottom: 50;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute; padding:20px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inModals {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px; background: hsl(229,15%,21%);
+    border-radius: 8px;
+    box-shadow: 7px 7px 5px rgba(0,0,0,0.7);
+}
+.modalInImg {
+    width: 300px; height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 2px 2px hsl(0, 0%, 8%);
+}
+.modalInItem {
+    color: hsl(0, 0%, 80%);
+    text-align: center;
+}
+.modalInItem:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.modalInItem:nth-child(3) {
+    font-size: 0.8rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.links {
+    font-size: 0.8rem;
+}
+.modalInX {
+    width: 100%; height: 25px;
+    margin: 0;
+    margin-top: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: hsl(266, 95%, 75%);
+    color: hsl(0, 0%, 80%);
+    text-align: center;
+    font-weight: 600;
+}
+.modalInX:hover {
+    cursor: pointer;
+    background-color: hsl(266, 95%, 70%);
+
+}
+.modalInItems {
+    text-align: left;
+}
+.itemsIn{
+    transition: all 0.5s;
+    background-color:hsl(229,15%,21%);
+}
+.itemsIn:hover {
+    transition: all 0.5s;
+    background-color:hsl(229,15%,31%);
+}
+.modalInItems div p {
+    margin: 10px;
+}
+.btmNav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.btmItem {
+    position: absolute;
+    width: 100px; height: 100px;
+    bottom: 0;
+    filter: grayscale(20%);
+}
+.btmItem:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+}
